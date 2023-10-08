@@ -1,4 +1,4 @@
-<%- include ('partials_htmlhead'); -%>
+<%- include ('partials/_htmlhead.ejs'); -%>
 
 <h1><%= title %></h1>
 
@@ -17,24 +17,24 @@
 <form action="/" method="get">
 
     <div>
-        <label for="name">name</label>
-        <input type="text" id="name" name="name" value="<%= data.name %>" />
+      <label for="name">name</label>
+      <input type="text" id="name" name="name" value="<%= data.name %>" />
     </div>
-
+  
     <div>
-        <label for="job">job</label>
-        <input type="text" id="job" name="job" value="<%= data.job %>" />
+      <label for="job">job</label>
+      <input type="text" id="job" name="job" value="<%= data.job %>" />
     </div>
-
+  
     <div>
-        <label for="nodejs"> like Node.js?</label>
-        <input type="checkbox" id="nodejs" name="nodejs" value="yes" <% if (data.nodejs) { %> checked<% } >% />
+      <label for="nodejs">like Node.js?</label>
+      <input type="checkbox" id="nodejs" name="nodejs" value="yes"<% if (data.nodejs) { %> checked<% } %> />
     </div>
-
-    <input type="hidden" name="data" value="<%= new Date(); %>" />
-
+  
+    <input type="hidden" name="date" value="<%= new Date(); %>" />
+  
     <button>submit</button>
+  
+  </form>
 
-</form>
-
-<%- include('partials_htmlfoot'); -%>
+<%- include('partials/_htmlfoot'); -%>
